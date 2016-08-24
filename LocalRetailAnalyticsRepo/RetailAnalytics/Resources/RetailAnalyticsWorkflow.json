@@ -1,0 +1,18 @@
+{
+    "Defaults" : {
+        "Application" : "RetailAnalyticsApp",
+        "SubApplication" : "RetailAnalyticsSubApp",
+        "RunAs" : "ec2-user",
+        "Host" : "engagelinux"
+    },
+
+    "RetailAnalyticsFlow": {
+        "Type": "Folder",
+        "Comment" : "Code reviewed by John Smith",
+
+        "CommandJob": {
+            "Type": "Job:Command",
+            "Command": "java RetailAnalytics"
+        }
+    }
+}
