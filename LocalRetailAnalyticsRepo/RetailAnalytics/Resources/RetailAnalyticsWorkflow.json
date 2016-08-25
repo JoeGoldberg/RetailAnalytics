@@ -12,7 +12,7 @@
 
         "CommandJob": {
             "Type": "Job:Command",
-            "Command": "java -jar RetailAnalytics.jar"
+            "Command": "java -classpath /var/lib/jenkins/RetailAnalytics.jar RetailAnalytics"
         },
 		"Notification" : {
        		"Type": "If",       
