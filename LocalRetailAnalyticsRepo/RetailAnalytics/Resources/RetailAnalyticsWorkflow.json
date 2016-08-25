@@ -12,7 +12,16 @@
 
         "CommandJob": {
             "Type": "Job:Command",
-            "Command": "java RetailAnalytics"
-        }
+            "Command": "java -jar RetailAnalytics.jar"
+        },
+		"Notification" : {
+       		"Type": "If",       
+ 	        "CompletionStatus": "NOTOK",             
+    		"mailToTeam": {
+            	"Type": "Mail",
+                "Message": "%%JOBNAME failed",
+                "To": "team@mycomp.com"
+          	}
+ 		}
     }
 }
