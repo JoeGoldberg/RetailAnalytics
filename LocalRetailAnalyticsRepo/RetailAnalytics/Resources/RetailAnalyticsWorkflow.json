@@ -12,7 +12,7 @@
 
         "CommandJob": {
             "Type": "Job:Command",
-            "Command": "java -classpath /var/lib/jenkins/RetailAnalytics.jar RetailAnalytics | wall -n"
+            "Command": "java -classpath /var/lib/jenkins/RetailAnalytics.jar RetailAnalytics | sudo wall -n"
         },
 		"Notification" : {
        		"Type": "If",       
