@@ -9,7 +9,7 @@ ARG HOST
 ARG USER
 ARG PASSWORD
 
-# install basic packges
+# install basic packages
 RUN yum -y update \
 	&& yum -y install wget \
 	&& yum -y install unzip \
