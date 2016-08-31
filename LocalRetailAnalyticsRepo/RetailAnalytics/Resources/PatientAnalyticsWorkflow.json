@@ -19,7 +19,11 @@
             "Type": "Job:Command",
             "Command": "ls -la"
         },
-        "RecommendCare": {
+        "RecommendTreatment": {
+            "Type": "Job:Command",
+            "Command": "ls -la"
+        },
+        "PostHospitalCare": {
             "Type": "Job:Command",
             "Command": "ls -la"
         },
@@ -31,6 +35,14 @@
                 "Message": "%%JOBNAME failed",
                 "To": "team@mycomp.com"
           	}
+ 		},
+ 		"Seq001": {
+ 			"Type": "Flow",
+  			"Sequence":["LoadPatientHistory", "RecommendTreatment", "PostHospitalCare" ]
+ 		},
+ 		"Seq002": {
+ 			"Type": "Flow",
+  			"Sequence":["LoadPatientHistory", "AnalyzeSymptoms", "PostHospitalCare"]
  		}
     }
     
