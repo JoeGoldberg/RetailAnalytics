@@ -1,18 +1,27 @@
 {
     "Defaults" : {
-        "Application" : "RetailAnalyticsApp",
-        "SubApplication" : "RetailAnalyticsSubApp",
+        "Application" : "PatientAnalyticsApp",
+        "SubApplication" : "PatientAnalyticsSubApp",
         "RunAs" : "ec2-user",
         "Host" : "engagelinux"
     },
 
     "RetailAnalyticsFlow": {
         "Type": "Folder",
+        "OrderMethod": "Manual",
         "Comment" : "Code reviewed by John Smith",
 
-        "CommandJob": {
+        "LoadPatientHistory": {
             "Type": "Job:Command",
-            "Command": "java -classpath /var/lib/jenkins/RetailAnalytics.jar RetailAnalytics | sudo wall -n"
+            "Command": "java -classpath /var/lib/jenkins/PatientAnalytics.jar PatientAnalytics | sudo wall -n"
+        },
+        "AnalyzeSymptoms": {
+            "Type": "Job:Command",
+            "Command": "ls -la"
+        },
+        "RecommendCare": {
+            "Type": "Job:Command",
+            "Command": "ls -la"
         },
 		"Notification" : {
        		"Type": "If",       
@@ -24,4 +33,5 @@
           	}
  		}
     }
+    
 }
