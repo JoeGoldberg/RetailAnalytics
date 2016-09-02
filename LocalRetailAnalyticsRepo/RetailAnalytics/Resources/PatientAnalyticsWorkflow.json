@@ -6,7 +6,7 @@
         "Host" : "engagelinux"
     },
 
-    "RetailAnalyticsFlow": {
+    "PatientAnalyticsFlow": {
         "Type": "Folder",
         "OrderMethod": "Manual",
         "Comment" : "Code reviewed by John Smith",
