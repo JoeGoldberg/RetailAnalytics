@@ -9,7 +9,7 @@
     "PatientAnalyticsFlow": {
         "Type": "Folder",
         "OrderMethod": "Manual",
-        "Comment" : "Code reviewed by John Smith sss",
+        "Comment" : "Code reviewed by John Smith and Fred ",
 
         "LoadPatientHistory": {
             "Type": "Job:Command",
