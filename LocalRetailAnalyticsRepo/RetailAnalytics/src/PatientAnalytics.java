@@ -6,7 +6,6 @@ public class PatientAnalytics {
 			System.out.println("Hello Patient Analytics at BMC Engage 2016!");
 			System.out.println("Test 030");
 			
-			System.out.println("Heloo Robin and Jason");
 			
 		}
 
