@@ -9,7 +9,7 @@
     "PatientAnalyticsFlow": {
         "Type": "Folder",
         "OrderMethod": "Manual",
-        "Comment" : "Code reviewed by John Smith for BMC Engage",
+        "Comment" : "Code reviewed by John Smith for Gartner SAS in London",
 
         "LoadPatientHistory": {
             "Type": "Job:Command",
