@@ -1,0 +1,42 @@
+{
+	"TJF_AAPI_MegaFlow" :
+	{
+		"Type" : "Folder",
+			"Application" : "TJF_Jobs", "SubApplication" : "AAPI TypicalFlow", 
+			"Defaults" : {"RunAs" : "workbench", "Application" : "TJF_Jobs", "SubApplication" : "AAPI TypicalFlow", "When" : {"WeekDays" : ["ALL"]}, 
+			"Job": {"actionIfSuccess" : {"Type": "If", "CompletionStatus":"OK", "mailTeam": 
+					{"Type": "Mail", "Message": "Job %%JOBNAME succeeded", "Subject": "Success", "To": "joe_goldberg@bmc.com"}}},
+			"Job": {"actionIfError" : {"Type": "If", "CompletionStatus":"NOTOK", "mailTeam": 
+					{"Type": "Mail", "Message": "Job %%JOBNAME failed", "Subject": "Error occurred", "To": "joe_goldberg@bmc.com"}}}
+			},
+			"OrderMethod": "Manual",
+			"TJF_AAPI_Job1": {"Type" : "Job:Command", "Comment" : "Run a simple command", "Command" : "echo hello job 1"},    
+			"TJF_AAPI_Job2": {"Type" : "Job:Command", "Command" : "echo hello job 2"},    
+			"TJF_AAPI_Job3": {"Type" : "Job:Command", "Command" : "echo hello job 3"}, 
+			"TJF_AAPI_Job4": {"Type" : "Job:Command", "Command" : "echo hello job 4"}, 
+			"TJF_AAPI_Job5": {"Type" : "Job:Command", "Command" : "echo hello job 5"}, 		
+			"TJF_AAPI_Job6": {"Type" : "Job:Command", "Command" : "echo hello job 6"}, 
+			"TJF_AAPI_Job7": {"Type" : "Job:Command", "Command" : "echo hello job 7"},
+			"TJF_AAPI_Job8": {"Type" : "Job:Command", "Command" : "echo hello job 8"},
+			"TJF_AAPI_Job9": {"Type" : "Job:Command", "Command" : "echo hello job 9"},
+			"TJF_AAPI_Job10": {"Type" : "Job:Command", "Command" : "echo hello job 10"},
+			"TJF_AAPI_Job11": {"Type" : "Job:Command", "Command" : "echo hello job 11"},    
+			"TJF_AAPI_Job12": {"Type" : "Job:Command", "Command" : "echo hello job 12"},    
+			"TJF_AAPI_Job13": {"Type" : "Job:Command", "Command" : "echo hello job 13"}, 
+			"TJF_AAPI_Job14": {"Type" : "Job:Command", "Command" : "echo hello job 14"}, 
+			"TJF_AAPI_Job15": {"Type" : "Job:Command", "Command" : "echo hello job 15"}, 		
+			"TJF_AAPI_Job16": {"Type" : "Job:Command", "Command" : "echo hello job 16"}, 
+			"TJF_AAPI_Job17": {"Type" : "Job:Command", "Command" : "echo hello job 17"},
+			"TJF_AAPI_Job18": {"Type" : "Job:Command", "Command" : "echo hello job 18"},
+			"TJF_AAPI_Job19": {"Type" : "Job:Command", "Command" : "echo hello job 19"},
+			"TJF_AAPI_Job20": {"Type" : "Job:Command", "Command" : "echo hello job 20"},
+			
+		"flow00": {"Type":"Flow", "Comment" : "Define job flow relationships", "Sequence":["TJF_AAPI_Job1", "TJF_AAPI_Job2", "TJF_AAPI_Job6", "TJF_AAPI_Job7", "TJF_AAPI_Job17"]},
+		"flow01": {"Type":"Flow", "Sequence":["TJF_AAPI_Job1", "TJF_AAPI_Job3", "TJF_AAPI_Job8", "TJF_AAPI_Job9", "TJF_AAPI_Job17"]},
+		"flow02": {"Type":"Flow", "Sequence":["TJF_AAPI_Job1", "TJF_AAPI_Job4", "TJF_AAPI_Job10", "TJF_AAPI_Job11", "TJF_AAPI_Job17"]},
+		"flow03": {"Type":"Flow", "Sequence":["TJF_AAPI_Job1", "TJF_AAPI_Job5", "TJF_AAPI_Job12", "TJF_AAPI_Job13", "TJF_AAPI_Job17"]},
+		"flow04": {"Type":"Flow", "Sequence":["TJF_AAPI_Job1", "TJF_AAPI_Job14", "TJF_AAPI_Job15", "TJF_AAPI_Job16", "TJF_AAPI_Job17"]},
+		"flow05": {"Type":"Flow", "Sequence":["TJF_AAPI_Job1", "TJF_AAPI_Job4", "TJF_AAPI_Job8", "TJF_AAPI_Job7", "TJF_AAPI_Job18", "TJF_AAPI_Job19", "TJF_AAPI_Job20"]}
+
+	}
+}
