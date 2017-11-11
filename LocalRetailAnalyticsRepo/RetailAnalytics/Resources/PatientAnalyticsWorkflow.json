@@ -16,24 +16,19 @@
             "Command": "java -classpath /var/lib/jenkins/PatientAnalytics.jar PatientAnalytics | sudo wall -n"
         },
         "AnalyzeSymptoms": {
-            "Type": "Job:Command",
-            "Command": "ls -la"
+            "Type": "Job:Command", "Command": "ls -la"
         },
         "RecommendTreatment": {
-            "Type": "Job:Command",
-            "Command": "ls -la"
+            "Type": "Job:Command", "Command": "ls -la"
         },
         "PostHospitalCare": {
-            "Type": "Job:Command",
-            "Command": "ls -la"
+            "Type": "Job:Command", "Command": "ls -la"
         },
 		"Notification" : {
        		"Type": "If",       
  	        "CompletionStatus": "NOTOK",             
     		"mailToTeam": {
-            	"Type": "Mail",
-                "Message": "%%JOBNAME failed",
-                "To": "team@mycomp.com"
+            	"Type": "Mail", "Message": "%%JOBNAME failed", "To": "team@mycomp.com"
           	}
  		},
  		"Seq001": {
