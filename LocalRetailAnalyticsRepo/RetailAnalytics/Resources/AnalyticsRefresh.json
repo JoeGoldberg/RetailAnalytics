@@ -1,15 +1,16 @@
 {
+	"Defaults" : {
+		"RunAs" : "emuser", "Application" : "TJF", "SubApplication" : "TJF_AAPI MegaFlow", "When" : { "WeekDays":["ALL"]},
+		"Description" : "Something is better than nothing",
+		"ControlmServer":"controlm", "OrderMethod": "Manual",  "SiteStandard" : "TJF_Std",
+		"Job": {"actionIfSuccess" : {"Type": "If", "CompletionStatus":"OK", "mailTeam": 
+			{"Type": "Mail", "Message": "Job %%JOBNAME succeeded", "Subject": "Success", "To": "joe_goldberg@bmc.com"}}},
+		"Job": {"actionIfError" : {"Type": "If", "CompletionStatus":"NOTOK", "mailTeam": 
+			{"Type": "Mail", "Message": "Job %%JOBNAME failed", "Subject": "Error occurred", "To": "joe_goldberg@bmc.com"}}}
+	},
 	"TJF_AAPI_MegaFlow" :
 	{
 		"Type" : "Folder",
-			"Application" : "TJF_Jobs", "SubApplication" : "AAPI TypicalFlow", 
-			"Defaults" : {"RunAs" : "workbench", "Application" : "TJF_Jobs", "SubApplication" : "AAPI TypicalFlow", "When" : {"WeekDays" : ["ALL"]}, 
-			"Job": {"actionIfSuccess" : {"Type": "If", "CompletionStatus":"OK", "mailTeam": 
-					{"Type": "Mail", "Message": "Job %%JOBNAME succeeded", "Subject": "Success", "To": "joe_goldberg@bmc.com"}}},
-			"Job": {"actionIfError" : {"Type": "If", "CompletionStatus":"NOTOK", "mailTeam": 
-					{"Type": "Mail", "Message": "Job %%JOBNAME failed", "Subject": "Error occurred", "To": "joe_goldberg@bmc.com"}}}
-			},
-			"OrderMethod": "Manual",
 			"TJF_AAPI_Job1": {"Type" : "Job:Command", "Comment" : "Run a simple command", "Command" : "echo hello job 1"},    
 			"TJF_AAPI_Job2": {"Type" : "Job:Command", "Command" : "echo hello job 2"},    
 			"TJF_AAPI_Job3": {"Type" : "Job:Command", "Command" : "echo hello job 3"}, 
