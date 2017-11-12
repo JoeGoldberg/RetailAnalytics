@@ -3,13 +3,14 @@
         "Application" : "PatientAnalyticsApp",
         "SubApplication" : "PatientAnalyticsSubApp",
         "RunAs" : "ec2-user",
-        "Host" : "engagelinux"
+        "Host" : "engagelinux",
+        "SiteStandard" : "WildWest"
     },
 
     "PatientAnalyticsFlow": {
         "Type": "Folder",
         "OrderMethod": "Manual",
-        "Comment" : "Code reviewed by John Smith for Gartner SAS in London",
+        "Comment" : "Code reviewed by John Smith for DOES17 San Francisco",
 
         "LoadPatientHistory": {
             "Type": "Job:Command",
