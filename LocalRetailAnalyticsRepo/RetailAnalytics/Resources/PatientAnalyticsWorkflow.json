@@ -14,7 +14,7 @@
 
         "LoadPatientHistory": {
             "Type": "Job:Command",
-            "Command": "java -classpath /var/lib/jenkins/PatientAnalytics.jar PatientAnalytics | sudo wall -n"
+            "Command": "java -classpath /var/lib/jenkins/PatientAnalytics.jar PatientAnalytics"
         },
         "AnalyzeSymptoms": {
             "Type": "Job:Command", "Command": "ls -la"
